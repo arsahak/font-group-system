@@ -81,7 +81,7 @@ const FontGroupForm = ({ fonts, onSave, editingGroup }) => {
   };
 
   return (
-    <div className="p-4 max-w-4xl mx-auto">
+    <div className="">
       <div className="mb-4">
         <h3 className="font-semibold text-xl">Create Font Groups:</h3>
         <p className="text-base text-gray-600">
