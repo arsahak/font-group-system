@@ -4,8 +4,6 @@ const FontList = ({ fonts, setFonts }) => {
     setFonts(fonts.filter((font, index) => index !== id));
   };
 
-  console.log('"fonts"', fonts);
-
   return (
     <div className="mt-8  rounded-lg border border-gray-200 p-6 bg-white">
       <h3 className="font-semibold text-xl">Uploaded Fonts:</h3>

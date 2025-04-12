@@ -1,6 +1,4 @@
 export default function FontGroupList({ groups, onEdit, onDelete }) {
-  console.log("checkde groups", groups);
-
   return (
     <div className="mt-6 mb-14">
       <div className="mt-8  rounded-lg border border-gray-200 p-6 bg-white">

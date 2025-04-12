@@ -31,6 +31,9 @@ const FontGroupForm = ({ fonts, onSave, editingGroup }) => {
     setRows(updatedRows);
   };
 
+
+  // Function to handle font selection
+
   const toggleFontSelection = (index, value) => {
     const selected = rows[index].font;
     const updated = selected.includes(value)
@@ -49,6 +52,8 @@ const FontGroupForm = ({ fonts, onSave, editingGroup }) => {
   const removeRow = (index) => {
     setRows(rows.filter((_, idx) => idx !== index));
   };
+
+  // Function to handle the creation or update of font groups
 
   const handleCreateOrUpdate = () => {
     if (!groupTitle.trim()) {
@@ -151,6 +156,7 @@ const FontGroupForm = ({ fonts, onSave, editingGroup }) => {
         </div>
       ))}
 
+      {/* Add Row */}
       <div className="flex justify-between items-center spa gap-2 mt-4">
         <button
           onClick={addRow}
@@ -158,6 +164,9 @@ const FontGroupForm = ({ fonts, onSave, editingGroup }) => {
         >
           + Add Row
         </button>
+
+        {/* Create Groups and Update */}
+
         <button
           onClick={handleCreateOrUpdate}
           className="bg-green-600 text-white px-6 py-1 rounded hover:bg-green-700"

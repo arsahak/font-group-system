@@ -7,6 +7,8 @@ export default function FontUpload({ onUpload }) {
   const [isLoading, setIsLoading] = useState(false);
   const [uploadError, setUploadError] = useState("");
 
+  // Function to handle file upload
+
   const handleFile = (file) => {
     if (!file) return;
 
@@ -44,15 +46,21 @@ export default function FontUpload({ onUpload }) {
     reader.readAsDataURL(file);
   };
 
+  // Functions to handle drag and drop events
+
   const handleDragEnter = (e) => {
     e.preventDefault();
     if (!isLoading) setIsDragging(true);
   };
 
+  // Function to handle drag over event
+
   const handleDragLeave = (e) => {
     e.preventDefault();
     setIsDragging(false);
   };
+
+  // Function to handle drop event
 
   const handleDrop = (e) => {
     e.preventDefault();

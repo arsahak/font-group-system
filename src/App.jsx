@@ -8,19 +8,29 @@ const App = () => {
   const [fonts, setFonts] = useState([]);
   const [groups, setGroups] = useState([]);
 
+  // Function to handle font upload
+
   const handleUpload = (font) => setFonts([...fonts, font]);
+
+
+  // Function to handle font group deletion
 
   const deleteGroup = (index) =>
     setGroups(groups.filter((_, idx) => idx !== index));
 
+
   const [editingGroup, setEditingGroup] = useState(null);
   const [editingIndex, setEditingIndex] = useState(null);
+
+  // Function to handle font group editing
 
   const editGroup = (index) => {
     const group = groups[index];
     setEditingGroup(group);
     setEditingIndex(index);
   };
+
+  // Function to save the font group
 
   const saveGroup = (newGroup) => {
     if (editingIndex !== null) {
